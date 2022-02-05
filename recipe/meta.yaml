@@ -1,5 +1,5 @@
 {% set name = "napari-roi" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-roi-{{ version }}.tar.gz
-  sha256: 59422dc6c4d69d10e83b0dbc70593f90dcb81847982c2ecbc7526321123ff3f5
+  sha256: b4adeffeb0f08bf26b9491cd7dc2de45dd23da5ac71266b3ccf814145209e156
 
 build:
   noarch: python
