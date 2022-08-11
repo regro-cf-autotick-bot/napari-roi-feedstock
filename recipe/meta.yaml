@@ -17,14 +17,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - setuptools-scm
   run:
-    - napari >=0.4.12
-    - napari-plugin-engine >=0.1.4
+    - napari >=0.4.13
     - numpy
     - pandas
-    - python >=3.7
+    - python >=3.8
     - qtpy
     - vispy
 
