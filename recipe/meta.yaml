@@ -1,5 +1,5 @@
 {% set name = "napari-roi" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-roi-{{ version }}.tar.gz
-  sha256: 786888830b2a31137f43acac470a3265985cb98bb9afffd0627c80a1fbbd6630
+  sha256: e5b916cfcb2c378733e8632ba669d91381e2cc4568fd3e4296e8ffe055f3a5d9
 
 build:
   noarch: python
@@ -17,14 +17,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - setuptools-scm
   run:
-    - napari >=0.4.12
-    - napari-plugin-engine >=0.1.4
+    - napari >=0.4.13
     - numpy
     - pandas
-    - python >=3.7
+    - python >=3.8
     - qtpy
     - vispy
 
