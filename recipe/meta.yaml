@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-roi-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/napari-roi-{{ version }}.tar.gz
   sha256: 0123238ee652931ed0bc90421ddf76d1d58c0d4c89790a8512c5649e88620729
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - napari >=0.4.13
     - numpy
     - pandas
-    - python >=3.8
+    - python >={{ python_min }}
     - qtpy
     - vispy
 
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/BodenmillerGroup/napari-roi
